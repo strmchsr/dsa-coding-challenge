@@ -1,6 +1,8 @@
 package com.androidiots.coding
 
 import com.androidiots.coding.datastructure.linkedlist.SinglyLinkedList
+import com.androidiots.coding.datastructure.linkedlist.detectLoop
+import com.androidiots.coding.datastructure.linkedlist.detectLoopFloydAlgorithm
 import com.androidiots.coding.datastructure.tree.*
 import java.lang.StringBuilder
 
@@ -50,9 +52,18 @@ fun main(args: Array<String>) {
     list.insertAtEnd(data = IdName(id = 2, name = "Ramesh"))
     list.insertAtEnd(data = IdName(id = 3, name = "Suresh"))
     list.insertAtEnd(data = IdName(id = 4, name = "John"))
+    list.headNode?.nextNode?.nextNode = list.headNode
+   // list.print()
+   // list.reverse()
+  //  list.print()
+    println("list contains loop?: ${detectLoopFloydAlgorithm(list = list)?.data?.name}")
 
-    list.print()
-    list.reverse()
-    list.print()
+    var list1 = SinglyLinkedList<Int>()
+    list1.insertAtEnd(data = 7)
+    list1.insertAtEnd(data = 14)
+    list1.insertAtEnd(data = 21)
+    list1.insertAtEnd(data = 7)
+    list1.print()
+    println("list contains loop?: ${detectLoop(list = list1)}")
 
 }
