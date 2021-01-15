@@ -1,8 +1,7 @@
 package com.androidiots.coding
 
-import com.androidiots.coding.datastructure.linkedlist.SinglyLinkedList
-import com.androidiots.coding.datastructure.linkedlist.detectLoop
-import com.androidiots.coding.datastructure.linkedlist.detectLoopFloydAlgorithm
+import com.androidiots.coding.datastructure.graph.Graph
+import com.androidiots.coding.datastructure.linkedlist.*
 import com.androidiots.coding.datastructure.tree.*
 import java.lang.StringBuilder
 
@@ -46,24 +45,42 @@ fun main(args: Array<String>) {
 //    bst1.getRoot()?.let {  println("fing nodes at distance 3:${findNodesAtKthDistance(root = it, k = 2)}") }
 
 
-    //Linked List
-    var list = SinglyLinkedList<IdName>()
-    list.insertAtEnd(data = IdName(id = 1, name = "Shashank"))
-    list.insertAtEnd(data = IdName(id = 2, name = "Ramesh"))
-    list.insertAtEnd(data = IdName(id = 3, name = "Suresh"))
-    list.insertAtEnd(data = IdName(id = 4, name = "John"))
-    list.headNode?.nextNode?.nextNode = list.headNode
-   // list.print()
-   // list.reverse()
-  //  list.print()
-    println("list contains loop?: ${detectLoopFloydAlgorithm(list = list)?.data?.name}")
+//    //Linked List
+//    var list = SinglyLinkedList<IdName>()
+//    list.insertAtEnd(data = IdName(id = 1, name = "Shashank"))
+//    list.insertAtEnd(data = IdName(id = 2, name = "Ramesh"))
+//    list.insertAtEnd(data = IdName(id = 3, name = "Suresh"))
+//    list.insertAtEnd(data = IdName(id = 4, name = "John"))
+//    list.headNode?.nextNode?.nextNode = list.headNode
+//   // list.print()
+//   // list.reverse()
+//  //  list.print()
+//    println("list contains loop?: ${detectLoopFloydAlgorithm(list = list)?.data?.name}")
 
-    var list1 = SinglyLinkedList<Int>()
-    list1.insertAtEnd(data = 7)
-    list1.insertAtEnd(data = 14)
-    list1.insertAtEnd(data = 21)
-    list1.insertAtEnd(data = 7)
-    list1.print()
-    println("list contains loop?: ${detectLoop(list = list1)}")
+//    var list1 = SinglyLinkedList<Int>()
+//    list1.insertAtEnd(data = 7)
+//    list1.insertAtEnd(data = 14)
+//    list1.insertAtEnd(data = 10)
+//    list1.insertAtEnd(data = 21)
+//    list1.print()
+//
+//    var list2 = SinglyLinkedList<Int>()
+//    list2.insertAtEnd(data = 23)
+//    list2.headNode?.nextNode = list1.headNode?.nextNode?.nextNode
+//    list2.print()
+//    println("list contains loop?: ${detectLoop(list = list1)}")
+//    println("Middle Node: ${findMiddleNode(list = list1)?.data}")
+//
+//    println("Intersection: ${findIntersection(list1, list2)?.data}")
+
+    //Graph
+
+    var graph = Graph(4)
+    graph.addEdge(0, 1)
+    graph.addEdge(0, 2)
+    graph.addEdge(1, 3)
+    graph.addEdge(2, 3)
+
+    graph.printGraph()
 
 }
