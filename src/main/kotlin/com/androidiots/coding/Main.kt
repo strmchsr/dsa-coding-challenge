@@ -3,6 +3,9 @@ package com.androidiots.coding
 import com.androidiots.coding.datastructure.graph.Graph
 import com.androidiots.coding.datastructure.linkedlist.*
 import com.androidiots.coding.datastructure.tree.*
+import com.androidiots.coding.slidingwindow.LongestSubstringKDistinct
+import com.androidiots.coding.slidingwindow.MaxSumSubArrayOfSizeK
+import com.androidiots.coding.slidingwindow.MinSizeSubArraySum
 import java.lang.StringBuilder
 
 fun main(args: Array<String>) {
@@ -75,12 +78,21 @@ fun main(args: Array<String>) {
 
     //Graph
 
-    var graph = Graph(4)
-    graph.addEdge(0, 1)
-    graph.addEdge(0, 2)
-    graph.addEdge(1, 3)
-    graph.addEdge(2, 3)
+//    var graph = Graph(4)
+//    graph.addEdge(0, 1)
+//    graph.addEdge(0, 2)
+//    graph.addEdge(1, 3)
+//    graph.addEdge(2, 3)
+//
+//    graph.printGraph()
+//
+//    //max sum
+//    print(MaxSumSubArrayOfSizeK.maxSumSlidingWindow(intArrayOf(2, 3, 4, 1, 5), 3))
 
-    graph.printGraph()
+    //min subArray with target sum
+  //  print(MinSizeSubArraySum.minSubArraySize(intArrayOf(2, 1, 5, 2, 3, 2), 7))
+
+    //longest substring in it with no more than K distinct
+    LongestSubstringKDistinct.longestSubstringKDistinct("cbbebi", 3)
 
 }

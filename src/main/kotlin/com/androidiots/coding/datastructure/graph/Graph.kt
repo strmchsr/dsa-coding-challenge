@@ -13,6 +13,8 @@ class Graph(var vertices : Int) {
     fun addEdge(source : Int , destination : Int){
         if(source < vertices && destination < vertices){
             adjacencyList[source].insertAtEnd(data = destination)
+            //for undirected graph
+            adjacencyList[destination].insertAtEnd(data = source)
         }
     }
     fun printGraph() {
