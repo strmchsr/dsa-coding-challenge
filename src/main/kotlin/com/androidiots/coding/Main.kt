@@ -2,8 +2,10 @@ package com.androidiots.coding
 
 import com.androidiots.coding.datastructure.graph.Graph
 import com.androidiots.coding.datastructure.linkedlist.*
+import com.androidiots.coding.datastructure.ringbuffer.RingBuffer
 import com.androidiots.coding.datastructure.tree.*
 import com.androidiots.coding.slidingwindow.LongestSubstringKDistinct
+import com.androidiots.coding.slidingwindow.MaxFruitCountOf2Types
 import com.androidiots.coding.slidingwindow.MaxSumSubArrayOfSizeK
 import com.androidiots.coding.slidingwindow.MinSizeSubArraySum
 import java.lang.StringBuilder
@@ -93,6 +95,23 @@ fun main(args: Array<String>) {
   //  print(MinSizeSubArraySum.minSubArraySize(intArrayOf(2, 1, 5, 2, 3, 2), 7))
 
     //longest substring in it with no more than K distinct
-    LongestSubstringKDistinct.longestSubstringKDistinct("cbbebi", 3)
+    //LongestSubstringKDistinct.longestSubstringKDistinct("cbbebi", 3)
+   // MaxFruitCountOf2Types.findLength(charArrayOf('A', 'L', 'B', 'L', 'A', 'J','A','A','L'))
 
+    val ringBuffer = RingBuffer<String>(10)
+    ringBuffer.enqueue("A")
+    ringBuffer.enqueue("B")
+    ringBuffer.enqueue("C")
+    ringBuffer.enqueue("D")
+    ringBuffer.enqueue("E")
+    ringBuffer.enqueue("F")
+    ringBuffer.enqueue("G")
+    ringBuffer.enqueue("H")
+    ringBuffer.enqueue("I")
+    ringBuffer.enqueue("J")
+    ringBuffer.enqueue("K")
+    ringBuffer.enqueue("L")
+    ringBuffer.enqueue("M")
+    ringBuffer.enqueue("N")
+    println(ringBuffer.contents())
 }
