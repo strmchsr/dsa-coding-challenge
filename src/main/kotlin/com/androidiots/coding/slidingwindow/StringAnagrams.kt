@@ -36,5 +36,8 @@ object StringAnagrams {
 
 fun main() {
     var result = StringAnagrams.findStringAnagram("abbcabc","abc")
+    var i = 0
+    var list = arrayOf("Shashank", "Ravi")
+    println(list[i++])
     print(result)
 }

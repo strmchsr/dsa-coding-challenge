@@ -35,3 +35,7 @@ object MaxSumSubArrayOfSizeK {
         return maxSum
     }
 }
+
+fun main() {
+    println(MaxSumSubArrayOfSizeK.maxSumSlidingWindow(intArrayOf(2, 3, 4, 1, 5),2))
+}

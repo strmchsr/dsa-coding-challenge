@@ -2,13 +2,6 @@ package com.androidiots.coding
 
 import com.androidiots.coding.datastructure.graph.Graph
 import com.androidiots.coding.datastructure.linkedlist.*
-import com.androidiots.coding.datastructure.ringbuffer.RingBuffer
-import com.androidiots.coding.datastructure.tree.*
-import com.androidiots.coding.slidingwindow.LongestSubstringKDistinct
-import com.androidiots.coding.slidingwindow.MaxFruitCountOf2Types
-import com.androidiots.coding.slidingwindow.MaxSumSubArrayOfSizeK
-import com.androidiots.coding.slidingwindow.MinSizeSubArraySum
-import java.lang.StringBuilder
 
 fun main(args: Array<String>) {
 //    var bst = BSTInsertionRecursive()
@@ -98,20 +91,43 @@ fun main(args: Array<String>) {
     //LongestSubstringKDistinct.longestSubstringKDistinct("cbbebi", 3)
    // MaxFruitCountOf2Types.findLength(charArrayOf('A', 'L', 'B', 'L', 'A', 'J','A','A','L'))
 
-    val ringBuffer = RingBuffer<String>(10)
-    ringBuffer.enqueue("A")
-    ringBuffer.enqueue("B")
-    ringBuffer.enqueue("C")
-    ringBuffer.enqueue("D")
-    ringBuffer.enqueue("E")
-    ringBuffer.enqueue("F")
-    ringBuffer.enqueue("G")
-    ringBuffer.enqueue("H")
-    ringBuffer.enqueue("I")
-    ringBuffer.enqueue("J")
-    ringBuffer.enqueue("K")
-    ringBuffer.enqueue("L")
-    ringBuffer.enqueue("M")
-    ringBuffer.enqueue("N")
-    println(ringBuffer.contents())
+//    val ringBuffer = RingBuffer<String>(10)
+//    ringBuffer.enqueue("A")
+//    ringBuffer.enqueue("B")
+//    ringBuffer.enqueue("C")
+//    ringBuffer.enqueue("D")
+//    ringBuffer.enqueue("E")
+//    ringBuffer.enqueue("F")
+//    ringBuffer.enqueue("G")
+//    ringBuffer.enqueue("H")
+//    ringBuffer.enqueue("I")
+//    ringBuffer.enqueue("J")
+//    ringBuffer.enqueue("K")
+//    ringBuffer.enqueue("L")
+//    ringBuffer.enqueue("M")
+//    ringBuffer.enqueue("N")
+//    println(ringBuffer.contents())
+
+//    var doublyLinkedList = DoublyLinkedList<String>()
+//    doublyLinkedList.insertAtHead("Shashank")
+//    doublyLinkedList.insertAtHead("Mayank")
+//    doublyLinkedList.insertAtHead("Kirti")
+//    doublyLinkedList.printList()
+
+//    val titles = arrayOf("duel", "dule", "speed", "spede", "deul", "cars")
+//    val gt: List<List<String?>> = GroupSimilarTitle().groupTitles(titles)
+//    val query = "duel"
+//
+//    // Searching for all titles
+//    for (g in gt) {
+//        if (g.contains(query)) println(g)
+//    }
+
+    val g = Graph(4)
+    g.addEdge(0, 1)
+    g.addEdge(0, 2)
+    g.addEdge(1, 3)
+    g.addEdge(2, 3)
+
+    g.printGraph()
 }
