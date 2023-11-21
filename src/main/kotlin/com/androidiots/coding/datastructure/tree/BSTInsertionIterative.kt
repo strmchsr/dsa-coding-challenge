@@ -30,7 +30,7 @@ class BSTInsertionIterative {
             }
             var leftChild = currentNode.leftChild
             var rightChild = currentNode.rightChild
-            if (value > currentNode?.value) {
+            if (value > currentNode.value) {
                 if (rightChild == null) {
                     rightChild = Node(value = value, leftChild = null, rightChild = null)
                     currentNode.rightChild = rightChild

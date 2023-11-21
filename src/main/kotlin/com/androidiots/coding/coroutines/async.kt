@@ -32,3 +32,4 @@ suspend fun getSecondValue(): Int {
     println("Returning second value $value")
     return value
 }
+
